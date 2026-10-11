@@ -25,7 +25,7 @@ a{color:inherit}
 .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
 .topbar{display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid rgba(23,48,29,.08);border-radius:999px;padding:14px 22px;box-shadow:0 10px 24px rgba(23,48,29,.06);margin:18px 0 10px;position:sticky;top:12px;z-index:20}
 .brand-wrap{display:flex;align-items:center;gap:14px;min-width:0}
-.brand-logo{display:block;width:72px;height:72px;object-fit:contain;flex-shrink:0}
+.brand-logo{display:block;width:72px;height:72px;object-fit:contain;flex-shrink:0;border-radius:18px;box-shadow:0 10px 24px rgba(185,109,26,.25)}
 .brand-name{font-family:'Bricolage Grotesque',Georgia,sans-serif;font-size:clamp(1.8rem,2.4vw,2.6rem);font-weight:800;color:#17301d;letter-spacing:-.04em;white-space:nowrap}
 .brand-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:3px;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#123e2b;opacity:1}
 .brand-meta span{position:relative}
@@ -177,7 +177,7 @@ footer strong{color:var(--ink)}
 <div class="wrap">
   <nav class="topbar" aria-label="Main navigation">
     <div class="brand-wrap">
-      <img class="brand-logo" src="file:///C:/Users/hp/AppData/Roaming/Code/agentSessionData/bc0a390a-708f-4895-801b-d66cf3129701/attachments/ffcdf3a4-2352-42f6-960b-944de4f5bb9d/Pasted%20Image.png" alt="Agrisweet logo">
+      <img class="brand-logo" src="Images/logo.png" alt="Agrisweet logo">
       <div>
         <div class="brand-name">Agrisweet</div>
         <div class="brand-meta" aria-label="Product categories">
@@ -220,8 +220,8 @@ footer strong{color:var(--ink)}
       <div class="grid grid-cols-2 gap-4">
         <img src="Images/applemango.png" alt="Apple Mangoes" class="w-full h-48 object-cover rounded-2xl shadow-lg">
         <img src="Images/Hass%20avocado.jpg" alt="Hass Avocados" class="w-full h-48 object-cover rounded-2xl shadow-lg">
-        <img src="file:///C:/Users/hp/AppData/Roaming/Code/agentSessionData/0e382a20-f525-4168-ad47-31f45c6f576c/attachments/650a0ee2-e902-4496-a2b6-8b4608a90271/pixie%20ai.png" alt="Pixie Oranges" class="w-full h-48 object-cover rounded-2xl shadow-lg">
-        <img src="file:///C:/Users/hp/AppData/Roaming/Code/agentSessionData/0e382a20-f525-4168-ad47-31f45c6f576c/attachments/98d52b5d-58ae-4900-a070-f1c44f5f949b/raw%20honey%20in%20comb.jpg" alt="Fresh Honey" class="w-full h-48 object-cover rounded-2xl shadow-lg">
+        <img src="Images/pixie ai.png" alt="Pixie Oranges" class="w-full h-48 object-cover rounded-2xl shadow-lg">
+        <img src="Images/raw honey in comb.jpg" alt="Fresh Honey" class="w-full h-48 object-cover rounded-2xl shadow-lg">
       </div>
       <div class="absolute -bottom-8 right-8 bg-white rounded-2xl p-4 shadow-2xl flex items-center gap-4 z-20">
         <div class="bg-emerald-50 text-emerald-600 p-3 rounded-xl">
@@ -266,7 +266,7 @@ footer strong{color:var(--ink)}
     <div class="products-grid">
       <article class="product-row product-row--image-left">
         <div class="product-media">
-          <img src="file:///C:/Users/hp/AppData/Roaming/Code/agentSessionData/0e382a20-f525-4168-ad47-31f45c6f576c/attachments/98d52b5d-58ae-4900-a070-f1c44f5f949b/raw%20honey%20in%20comb.jpg" alt="Honey jars from Agrisweet" />
+          <img src="Images/raw honey in comb.jpg" alt="Honey jars from Agrisweet" />
         </div>
         <div class="product-copy">
           <h3>Honey</h3>
@@ -280,14 +280,14 @@ footer strong{color:var(--ink)}
           <p>Our pixie oranges are the true, original variety, grown through a regenerative farming approach that restores the land it grows on rather than depleting it. We deliberately keep pesticide use low, favoring organic production methods over chemical intervention wherever possible.</p>
         </div>
         <div class="product-media">
-          <img src="file:///C:/Users/hp/AppData/Roaming/Code/agentSessionData/0e382a20-f525-4168-ad47-31f45c6f576c/attachments/650a0ee2-e902-4496-a2b6-8b4608a90271/pixie%20ai.png" alt="Pixie orange tree" />
+          <img src="Images/pixie ai.png" alt="Pixie orange tree" />
         </div>
       </article>
 
       <article class="product-row product-row--image-left">
         <div class="product-media product-media--split">
-          <img src="images/applemango.png" alt="Apple mango fruit" />
-          <img src="images/Kent.jpg" alt="Kent mango fruit" />
+          <img src="Images/applemango.png" alt="Apple mango fruit" />
+          <img src="Images/Kent.jpg" alt="Kent mango fruit" />
         </div>
         <div class="product-copy">
           <h3>Mangoes</h3>
@@ -301,7 +301,7 @@ footer strong{color:var(--ink)}
           <p>We grow and supply premium Hass avocados using sustainable methods that put the environment first. From soil health to water use, every step of our farming process is built to take care of the land that sustains it — protecting biodiversity and reducing our footprint at every stage.</p>
         </div>
         <div class="product-media">
-          <img src="images/Hass avocado.jpg" alt="Fresh Hass avocados" />
+          <img src="Images/Hass avocado.jpg" alt="Fresh Hass avocados" />
         </div>
       </article>
     </div>
@@ -313,7 +313,7 @@ footer strong{color:var(--ink)}
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="brand-wrap">
-          <img class="brand-logo" src="file:///C:/Users/hp/AppData/Roaming/Code/agentSessionData/bc0a390a-708f-4895-801b-d66cf3129701/attachments/ffcdf3a4-2352-42f6-960b-944de4f5bb9d/Pasted%20Image.png" alt="Agrisweet logo">
+          <img class="brand-logo" src="Images/logo.png" alt="Agrisweet logo">
           <div>
             <div class="brand-name">Agrisweet</div>
             <div class="brand-meta" aria-label="Product categories">
