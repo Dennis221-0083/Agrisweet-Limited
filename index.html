@@ -23,9 +23,9 @@ h1,h2,h3{font-family:'Bricolage Grotesque',Georgia,sans-serif;line-height:1.05;m
 a{color:inherit}
 :focus-visible{outline:3px solid var(--honey);outline-offset:3px}
 .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-.topbar{display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid rgba(23,48,29,.08);border-radius:999px;padding:14px 22px;box-shadow:0 10px 24px rgba(23,48,29,.06);margin:18px 0 10px;position:sticky;top:12px;z-index:20}
+.topbar{display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid rgba(23,48,29,.08);border-radius:999px;padding:8px 18px;box-shadow:0 10px 24px rgba(23,48,29,.06);margin:18px 0 10px;position:sticky;top:12px;z-index:20}
 .brand-wrap{display:flex;align-items:center;gap:14px;min-width:0}
-.brand-logo{display:block;width:72px;height:72px;object-fit:contain;flex-shrink:0;border-radius:18px;box-shadow:0 10px 24px rgba(185,109,26,.25)}
+.brand-logo{display:block;width:56px;height:56px;object-fit:contain;flex-shrink:0;border-radius:16px;box-shadow:0 10px 24px rgba(185,109,26,.25)}
 .brand-name{font-family:'Bricolage Grotesque',Georgia,sans-serif;font-size:clamp(1.8rem,2.4vw,2.6rem);font-weight:800;color:#17301d;letter-spacing:-.04em;white-space:nowrap}
 .brand-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:3px;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#123e2b;opacity:1}
 .brand-meta span{position:relative}
@@ -147,19 +147,44 @@ footer strong{color:var(--ink)}
   .product-row .product-media{order:1}
   .product-row .product-copy{order:2}
   .product-media,.product-copy{min-height:auto}
-  .product-media img,.product-media--split img{height:260px}
-  .product-copy{padding:1.5rem}
-  .row{grid-template-columns:72px 1fr;}
-  .row .sw{height:72px;grid-row:span 2}
-  .qty{grid-column:2}
-  .hero-inner{grid-template-columns:1fr}
-  .why,.steps{grid-template-columns:1fr}
-  .farm-item{grid-template-columns:1fr}
-  nav{flex-wrap:wrap;gap:12px}
-  .brand img{width:min(52vw,220px)}
-  nav a{margin-left:12px}
+  .product-media img,.product-media--split img{height:clamp(13rem,60vw,16rem)}
+  .product-copy{padding:1.25rem;border-radius:20px}
+  .products-grid{gap:22px}
+  .produce-story{padding-top:56px;padding-bottom:64px}
+  .produce-story > .wrap > h2{font-size:clamp(2.5rem,11vw,4rem);margin-bottom:24px}
+  .hero-section.relative{min-height:0;padding:3rem 0}
+  .hero-section .hero-layout{padding-top:0;padding-bottom:0;gap:2rem}
+  .hero-animated{min-height:clamp(14rem,50vw,17rem)}
+  .hero-animated__item h2{font-size:clamp(2.7rem,10vw,4.5rem);line-height:.95;letter-spacing:-.05em;max-width:12ch}
+  .hero-animated__item p{font-size:1rem;line-height:1.5}
+  .hero-section .hero-gallery-wrap{margin-top:0}
+  .hero-gallery img{height:clamp(7rem,31vw,9rem)}
+  .about-section{padding:56px 0 64px}
+  .about-inner{padding:0 20px}
+  .about-diamond-copy{gap:.35rem}
+  .about-diamond-copy .diamond-line{max-width:100%;white-space:normal;font-size:clamp(1rem,4.4vw,1.2em);line-height:1.35;text-wrap:balance}
+  .contact-value.email{white-space:normal;overflow-wrap:anywhere;word-break:break-word}
 }
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media(max-width:480px){
+  .topbar{flex-wrap:wrap;gap:6px;padding:6px 12px;margin:12px 0 6px;border-radius:24px}
+  .topbar .brand-wrap{flex:1 1 100%;gap:8px}
+  .topbar .brand-logo{width:40px;height:40px;border-radius:12px}
+  .topbar .brand-name{font-size:1.55rem}
+  .topbar .brand-meta{gap:6px;font-size:.58rem;letter-spacing:.05em}
+  .topbar .brand-meta span:not(:last-child)::after{margin-left:6px}
+  .nav-links{display:grid;width:100%;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px}
+  .nav-links a{justify-content:center;text-align:center;font-size:.78rem}
+  .nav-links a{padding:.35rem .25rem}
+  .nav-button{padding:.4rem .4rem}
+  .footer-grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .hero-animated__item{animation:none;opacity:0;transform:none}
+  .hero-animated__item:first-child{position:relative;opacity:1}
+  .about-tagline-word{animation:none;opacity:0}
+  .about-tagline-word:first-child{opacity:1;transform:translate(-50%,-50%)}
+}
 
 /* Floating WhatsApp FAB */
 .whatsapp-fab{position:fixed;right:20px;bottom:20px;width:64px;height:64px;border-radius:999px;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.25);z-index:9999;transition:transform .18s ease,box-shadow .18s ease;backface-visibility:hidden}
@@ -197,9 +222,9 @@ footer strong{color:var(--ink)}
   </nav>
 </div>
 
-<section class="relative w-full min-h-[90vh] flex items-center justify-center bg-cover bg-center" style="background-image: url('Images/Honey%20people.jpg');">
+<section class="hero-section relative w-full min-h-[90vh] flex items-center justify-center bg-cover bg-center" style="background-image: url('Images/Honey%20people.jpg');">
   <div class="absolute inset-0 bg-black/60"></div>
-  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-20">
+  <div class="hero-layout relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-20">
     <div class="flex flex-col items-start gap-6">
       <div class="hero-animated" aria-live="polite">
         <div class="hero-animated__item">
@@ -216,8 +241,8 @@ footer strong{color:var(--ink)}
         </div>
       </div>
     </div>
-    <div class="relative mt-12 lg:mt-0">
-      <div class="grid grid-cols-2 gap-4">
+    <div class="hero-gallery-wrap relative mt-12 lg:mt-0">
+      <div class="hero-gallery grid grid-cols-2 gap-4">
         <img src="Images/applemango.png" alt="Apple Mangoes" class="w-full h-48 object-cover rounded-2xl shadow-lg">
         <img src="Images/Hass%20avocado.jpg" alt="Hass Avocados" class="w-full h-48 object-cover rounded-2xl shadow-lg">
         <img src="Images/pixie ai.png" alt="Pixie Oranges" class="w-full h-48 object-cover rounded-2xl shadow-lg">
@@ -332,7 +357,6 @@ footer strong{color:var(--ink)}
         <ul class="contact-list">
           <li><a href="tel:+254720522381"><span class="contact-icon">✆</span><span class="contact-value">+254 720 522 381</span></a></li>
           <li><a href="tel:+254741070149"><span class="contact-icon">✆</span><span class="contact-value">+254 741 070 149</span></a></li>
-          <li><a href="mailto:mutavi.muswii@gmail.com"><span class="contact-icon">✉</span><span class="contact-value email">mutavi.muswii@gmail.com</span></a></li>
           <li><a href="mailto:kioko.mutukuu@gmail.com"><span class="contact-icon">✉</span><span class="contact-value email">kioko.mutukuu@gmail.com</span></a></li>
         </ul>
       </div>
